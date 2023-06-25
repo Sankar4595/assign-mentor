@@ -2,16 +2,8 @@ var express = require("express");
 var router = express.Router();
 var { Mentor, Student } = require("../schemas/schemas");
 
-var html = `
-  <h1>Nodejs - Assigning Mentor and Students with Database</h1>
-  <p>Create a Mentor : POST - "/mentor"</p>
-  <p>Create a Student : POST - "/student"</p>
-  <p>Assign a student to a mentor : PUT - "/mentor/:mentorId/student/:studentId"</p>
-  <p>Assign/change a mentor for a student : PUT - "/student/:studentId/mentor/:mentorId"</p>
-`;
-
 /* GET users listing. */
-router.get("/", html, async (req, res) => {
+router.get("/", async (req, res) => {
   res.send("respond with a resource");
 });
 
